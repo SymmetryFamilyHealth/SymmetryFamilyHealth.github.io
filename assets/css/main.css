@@ -1634,16 +1634,30 @@ section,
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   overflow: hidden;
+  border: 2px solid #bcbcbc; /* Light gray border for the box */
+  border-radius: 8px; /* Optional: Rounded corners */
+  background-color: #d6d6d6; /* Optional: Background color for the box */
+  padding: 10px; /* Add padding inside the box */
   border-right: 3px solid var(--background-color);
   border-bottom: 3px solid var(--background-color);
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.gallery .gallery-item:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
 }
 
 .gallery .gallery-item img {
   transition: all ease-in-out 0.4s;
+  border-radius: 6px; /* Optional: Match container's rounded corners */
+  max-width: 100%;
+  height: auto;
+  display: block; /* Ensure the image is centered and scales properly */
 }
 
 .gallery .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Keep the existing zoom effect for the image */
 }
 
 /*--------------------------------------------------------------
